@@ -1,0 +1,20 @@
+name: Staging Deployment
+
+on:
+  push:
+    branches: [ staging ]
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout source code
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Push source
+      - name: Push source
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: ${{ secrets.STG_DOKKU_GIT_URL }}
+          ssh_private_key: "${{ secrets.STG_DOKKU_SSH_KEY }}"

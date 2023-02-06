@@ -1,0 +1,11 @@
+{
+    "name": "sgtlab/website",
+    "type": "project",
+    "description": "SGTLab Website",
+    "license": "proprietary",
+    "require": {
+      "php": "^8.0",
+      "ext-mbstring": "*"
+    }
+  }
+  

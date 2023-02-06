@@ -1,0 +1,7 @@
+vendor/
+.env
+.bash_history
+.cache/
+.composer/
+.heroku/
+.profile.d/
